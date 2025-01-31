@@ -1,0 +1,79 @@
+/* Footer Styles */
+.footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fffafa;
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Footer Text */
+  .footer-text {
+    flex-grow: 1;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #353535;
+  }
+  
+  /* Social Media Links */
+  .footer-social {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+  
+  .footer-social a {
+    text-decoration: none;
+  }
+  
+  .footer-social .social-icon {
+    width: 30px; /* Adjust size of icons */
+    height: 30px; /* Maintain aspect ratio */
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-social .social-icon:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  /* RESPONSIVE DESIGN */
+  
+  /* Mobile View */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px;
+    }
+  
+    .footer-text {
+      font-size: 1rem;
+      margin-bottom: 10px;
+    }
+  
+    .footer-social {
+      gap: 15px;
+      margin-top: 10px;
+    }
+  
+    .footer-social .social-icon {
+      width: 25px;
+      height: 25px;
+    }
+  }
+  
+  /* Very Small Screens */
+  @media (max-width: 480px) {
+    .footer-text {
+      font-size: 0.9rem;
+    }
+  
+    .footer-social .social-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+  

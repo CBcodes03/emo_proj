@@ -1,0 +1,141 @@
+/* General Styles */
+.Whole-Component {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(186, 187, 187);
+}
+
+/* Container Styles */
+.main {
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 60%;
+    max-width: 600px;
+    min-width: 400px; /* Adjust to allow better responsiveness */
+    margin: 20px auto;
+}
+
+/* Card Styling */
+.cardhere {
+    width: 90%; /* Default width */
+    max-width: 450px; /* Prevent it from becoming too large */
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.cardhere img {
+    width: 100%; /* Make image fully responsive */
+    border-radius: 10px 10px 0 0;
+    object-fit: cover;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.stop-capture {
+    background-color: #ff4757;
+    color: white;
+}
+
+.stop-capture:hover {
+    background-color: #ff6b81;
+}
+
+.start-capture {
+    background-color: #31ff1e;
+    color: white;
+}
+
+.start-capture:hover {
+    background-color: #4eff3ef3;
+}
+
+/* Result Text */
+.result {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.display-emotion {
+    color: #1e7fff;
+    font-weight: bold;
+}
+
+.response {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* For tablets and small screens */
+@media (max-width: 1024px) {
+    .main {
+        width: 75%;
+        max-width: 500px;
+        min-width: 350px;
+    }
+    .cardhere {
+        width: 85%;
+    }
+    .result {
+        font-size: 25px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .main {
+        width: 90%;
+        max-width: 400px;
+        min-width: auto;
+        padding: 15px;
+    }
+    .cardhere {
+        width: 100%;
+    }
+    .result {
+        font-size: 22px;
+    }
+    button {
+        font-size: 18px;
+        padding: 8px 15px;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .main {
+        width: 95%;
+        max-width: 350px;
+        padding: 10px;
+    }
+    .cardhere {
+        width: 100%;
+    }
+    .result {
+        font-size: 20px;
+    }
+    button {
+        font-size: 16px;
+        padding: 7px 12px;
+    }
+}

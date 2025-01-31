@@ -1,0 +1,66 @@
+.top-bar {
+  display: flex;
+  flex-direction: row; /* Align logo and headings in the same row */
+  align-items: center; /* Align items vertically */
+  justify-content: space-between; /* Adjust spacing as needed */
+  background-color: #fffafa;
+  color: rgb(0, 0, 0);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px 20px;
+}
+
+/* Logo Styling */
+.logo img {
+  width: 100px; /* Default size */
+  height: auto;
+}
+
+/* Headings Styling */
+.headings {
+  flex-grow: 1; /* Allow headings to take available space */
+  text-align: center; /* Keep text centered */
+}
+
+.big-heading {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.small-heading {
+  font-size: 1rem;
+  color: #353535;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) { /* Tablets */
+  .logo img {
+    width: 70px;
+  }
+  .big-heading {
+    font-size: 1.8rem;
+  }
+  .small-heading {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) { /* Mobile devices */
+  .top-bar {
+    flex-direction: column; /* Stack logo and headings on smaller screens */
+    align-items: center;
+    padding: 15px;
+  }
+
+  .logo img {
+    width: 60px;
+    margin-bottom: 10px;
+  }
+
+  .big-heading {
+    font-size: 1.5rem;
+  }
+
+  .small-heading {
+    font-size: 0.9rem;
+  }
+}
