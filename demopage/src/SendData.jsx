@@ -65,7 +65,7 @@ const EmotionAnalysisTool = () => {
           setCapturedImage(imageData);
 
           axios
-            .post('http://localhost:5000/upload-image', {
+            .post('https://emo-proj-6zcz.onrender.com/upload-image', {
               image: imageData.split(',')[1],
             })
             .then((response) => {
