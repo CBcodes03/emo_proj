@@ -31,15 +31,9 @@ def upload_image():
     if request.method == 'POST':
         # Get image data from request
         image_data = request.json['image']
-        filename = "image_" + str(int(time.time())) + ".png"
-        save_image_from_base64(image_data, filename)
-        
-        # Process the image using your analyze_emotion_from_image function
-        path = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-        result = ana.analyze_emotion_from_image(path)
-        
-        os.remove(path)
-        
+        image_data_bytes = base64.b64decode(image_data)
+        image_bytes = BytesIO(image_data_bytes)
+        result = ana.analyze_emotion_from_image(image_bytes)
         # Return the result
         print(result)
         return jsonify({
